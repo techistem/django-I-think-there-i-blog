@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-techistem-djangoithinkt-g740fph6raw.ws.codeinstitute-ide.net','.herokuapp.com']
+ALLOWED_HOSTS = ['8000-techistem-djangoithinkt-m6xkguhs51b.ws.codeinstitute-ide.net','.herokuapp.com']
 
 
 # Application definition
@@ -90,6 +90,12 @@ DATABASES = {
     'default': 
 dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.codeinstitute-ide.net/",
+    "https://*.herokuapp.com"
+]
+
 
 
 # Password validation
