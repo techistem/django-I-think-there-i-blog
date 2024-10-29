@@ -34,6 +34,12 @@ class Comment(models.Model):
     approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering = ["created_on"]
+
+    def __str__(self):
+        return f"Comment {self.body} by {self.author}"
+
 class Event(models.Model):
     event_name = models.CharField(max_length=200, unique=True)
     location = models.CharField(max_length=200)
