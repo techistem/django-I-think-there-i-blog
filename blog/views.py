@@ -27,6 +27,7 @@ def post_detail(request, slug):
 
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
+    print("this is post in detail page ",post)
 
     return render(
         request,
