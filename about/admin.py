@@ -1,15 +1,9 @@
-from django.shortcuts import render
+from django.contrib import admin
 from .models import About
+from django_summernote.admin import SummernoteModelAdmin
 
 
-def about_me(request):
-    """
-    Renders the About page
-    """
-    about = About.objects.all().order_by('-updated_on').first()
+@admin.register(About)
+class AboutAdmin(SummernoteModelAdmin):
 
-    return render(
-        request,
-        "about/about.html",
-        {"about": about},
-    )
+    summernote_fields = ('content',)
