@@ -32,5 +32,7 @@ def post_detail(request, slug):
         request,
         "blog/post_detail.html",
         {"post": post,
-        "coder": "Matt Rudge"},
+         "coder": "Matt Rudge"},
     )
+
+    
