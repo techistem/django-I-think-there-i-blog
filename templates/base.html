@@ -96,6 +96,8 @@
         {% else %}
         <p class="text-end m-3">You are not logged in</p>
         {% endif %}
+         {% block extras %}
+    {% endblock %}
 
         <p class="m-0 text-center text-white">
             {% block copyright %}
@@ -121,6 +123,8 @@
 
     <script src= "{% static 'js/script.js' %}">
         </script>
+         {% block extras %}
+         {% endblock %}
 </body>
 
 </html>
