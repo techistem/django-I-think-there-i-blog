@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import About
+from about.models import About
 from .forms import CollaborateForm
 
 # Create your views here.
